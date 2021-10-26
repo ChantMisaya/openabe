@@ -55,7 +55,7 @@ zml/zelement.o:
 	$(CC) $(CCFLAGS) -c zml/zelement.c -o zelement.o
 
 zparser.o: zparser.yy
-	$(BISON) -d -v zparser.yy
+	bison -d -v zparser.yy
 	cp *.hh $(OABE_INCLUDE_DIR)
 	$(CXX) $(CXXFLAGS) -c -o zparser.o zparser.tab.cc
 
